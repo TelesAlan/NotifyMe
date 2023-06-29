@@ -1,4 +1,4 @@
-function notifyMe(title, body, icon){
+function notifyMe(title, { body, icon }){
 	if(!window.Notification){
 		console.log(`>> browser not support notifications.`);
 	} else {
@@ -8,7 +8,7 @@ function notifyMe(title, body, icon){
 
 			new Notification(title, {
 				body,
-				icon: icon || `https://cdn-icons-png.flaticon.com/512/4980/4980801.png`
+				icon
 			});
 		} else {
 			Notification.requestPermission().then(response => {

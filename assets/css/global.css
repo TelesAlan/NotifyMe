@@ -11,6 +11,21 @@
 	background: linear-gradient(to right, #d73d6c, #005f89, #fcb045);
 	background-size: 400%;
 	animation: animate-background 10s infinite ease-in-out;
+
+	display: flex;
+}
+
+button{
+	margin: auto;
+    padding: 10px 15px;
+    border-radius: 4px;
+    background: white;
+    border: 1px solid #ddd;
+    cursor: pointer;
+	transition: ease-in .3s;
+}
+button:hover{
+	background: rgba(255, 255, 255, .8);
 }
 
 @keyframes animate-background {

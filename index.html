@@ -10,12 +10,25 @@
 </head>
 
 <body>
-    <div class="animated-background"></div>
+    <div class="animated-background">
+        <button id="show-notification">Mostrar notificação</button>
+    </div>
 
     <script src="./assets/js/main.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            notifyMe("New notification", "You have a new message!");
+            notifyMe(`New notification`, {
+                body: `You have a new message!`, 
+                icon: `https://cdn-icons-png.flaticon.com/512/4980/4980801.png`
+            });
+        });
+
+        const buttonNotification = document.getElementById("show-notification");
+        buttonNotification.addEventListener("click", () => {
+            notifyMe(`New notification`, {
+                body: `You have a new message!`, 
+                icon: `https://cdn-icons-png.flaticon.com/512/4980/4980801.png`
+            });
         });
     </script>
 </body>
